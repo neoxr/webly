@@ -31,7 +31,7 @@ jobs:
       - name: Publish to npmjs.org with provenance
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
-          npm publish --registry=https://registry.npmjs.org/ --provenance
+          npm publish --registry=https://registry.npmjs.org/ --provenance --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
