@@ -7,14 +7,6 @@
   "files": [
     "lib/*"
   ],
-  "scripts": {
-    "build:all": "tsc && typedoc",
-    "build:docs": "typedoc",
-    "build:tsc": "tsc",
-    "build": "tsc",
-    "prepack": "tsc",
-    "prepare": "tsc"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/neoxr/webly.git"
