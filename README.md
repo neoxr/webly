@@ -57,7 +57,10 @@ const app = new App({
    routePath: './routers',
    middleware,
    socket: false,
-   port: 3000
+   port: 3000,
+   error: (req, res) => {
+      res.status(404).sendFile('./public/404.html', { root: process.cwd() })
+   }
 })
 
 // Start the server
