@@ -25,7 +25,7 @@ Below is an example setup using Webly, App, and Loader from the **@neoxr/webly**
 
 ```
 root/
-├── app.js
+├── index.js
 ├── routers/
 │   ├── index.js
 │   └── example.js
@@ -35,6 +35,7 @@ root/
 │   └── system/
 │       └── middleware.js
 └── public/
+    ├── 404.html
     └── index.html
 ```
 
@@ -52,9 +53,10 @@ await Loader.scraper('./lib/scraper')
 // Initialize the Webly application
 const app = new App({
    name: 'Open-API',
-   staticPath: './public',
+   staticPath: ['public'],
    routePath: './routers',
    middleware,
+   socket: false,
    port: 3000
 })
 
