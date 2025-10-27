@@ -1,6 +1,6 @@
 {
   "name": "@neoxr/webly",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A lightweight Express.js backend framework designed to accelerate API development with a modular structure, flexible configuration, and built-in middleware support.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
