@@ -58,6 +58,22 @@ const app = new App({
    middleware,
    socket: false,
    port: 3000,
+   session: {
+      name: 'token',
+      keys: ['session'],
+      maxAge: 72 * 60 * 60 * 1000, // 3 days
+      httpOnly: false,
+      sameSite: 'strict'
+   },
+   cors: {
+      origin: '*',
+      methods: ['GET', 'POST', 'PUT', 'DELETE'],
+      allowedHeaders: '*',
+      preflightContinue: false,
+      optionsSuccessStatus: 204,
+      exposedHeaders: '*',
+      credentials: true
+   },
    error: (req, res) => {
       res.status(404).sendFile('./public/404.html', { root: process.cwd() })
    }
