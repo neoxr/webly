@@ -57,6 +57,14 @@ const app = new App({
    routePath: './routers',
    middleware,
    socket: false,
+   socketOpts: {
+      transports: ['websocket', 'polling'],
+      reconnection: true,
+      reconnectionAttempts: 5,
+      reconnectionDelay: 1000,
+      pingInterval: 25000,
+      pingTimeout: 5000
+   },
    port: 3000,
    session: {
       name: 'token',
